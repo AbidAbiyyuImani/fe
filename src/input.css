@@ -18,4 +18,7 @@
   .form-group label {
     @apply font-semibold mb-1;
   }
+  .card {
+    @apply p-2 mb-4;
+  }
 }

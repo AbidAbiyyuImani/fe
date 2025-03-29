@@ -19,11 +19,11 @@
       </li>
       <li class="flex items-center">
         <button id="toggle-nav" class="cursor-pointer">
-          <i id="bars" class="fas fa-bars"></i>
+          <i id="icon" class="fas fa-bars"></i>
         </button>
       </li>
     </ul>
-    <ul id="nav-toggle" class="opacity-0 sm:opacity-100 -z-10 sm:z-10 w-full sm:w-auto bg-white flex flex-col sm:flex-row fixed top-16 sm:top-auto left-0 sm:left-auto right-0 sm:right-auto sm:rounded-md shadow-md transition-all ease-in-out duration-300">
+    <ul id="nav-toggle" class="opacity-0 sm:opacity-100 -z-10 sm:z-10 fixed top-16 sm:top-auto left-0 sm:left-auto right-0 sm:right-auto w-full sm:w-auto bg-white flex flex-col sm:flex-row sm:rounded-md shadow-md transition-all ease-in-out duration-300">
       <li>
         <a href="./login.html" class="hover:text-green-600 sm:px-4 py-2 sm:py-4 flex justify-center items-center space-x-2">
           <i class="fas fa-sign-in"></i>
@@ -50,23 +50,25 @@
       </li>
     </ul>
   </nav>
-  <main class="flex-1 flex items-center">
-    <form method='post' class="max-w-md mx-auto my-auto bg-white p-4 rounded-md shadow-md">
-      <div class="form-group">
-        <label for="">Nama Lengkap</label>
-        <input type="text" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
-      </div>
-      <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
-      </div>
-      <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
-      </div>
-      <button type="submit" class="w-full bg-gray-900 text-white rounded-md py-1">Register</button>
-      <a href="./login.html" class="text-blue-600 underline">Sudah mempunyai akun? login sekarang!</a>
-    </form>
+  <main class="flex-1 flex flex-col">
+    <div class="card mx-auto">
+      <form method='post' class="w-auto bg-white rounded-md shadow-md p-4">
+        <div class="form-group">
+          <label for="">Nama Lengkap</label>
+          <input type="text" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="email" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="password" class="outline-none w-full bg-transparent border rounded-md px-2 py-0.5">
+        </div>
+        <button type="submit" class="w-full bg-gray-900 text-white rounded-md py-1">Register</button>
+        <a href="./login.html" class="text-blue-600 underline">Sudah mempunyai akun? login sekarang!</a>
+      </form>
+    </div>
   </main>
   <footer>
     <div class="container mx-auto px-2 py-2 flex flex-col sm:flex-row justify-between">
@@ -79,12 +81,15 @@
     document.addEventListener('DOMContentLoaded', function() {
       const toggleNav = document.getElementById('toggle-nav');
       const navToggle = document.getElementById('nav-toggle');
-      const bars = document.getElementById('fa-bars');
+      const icon = document.getElementById('icon');
 
       toggleNav.addEventListener('click', function() {
         navToggle.classList.toggle('opacity-100');
         navToggle.classList.toggle('-z-10');
+        navToggle.classList.toggle('opacity-0');
         navToggle.classList.toggle('z-10');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
       });
     });
   </script>

@@ -7,3 +7,15 @@
     @apply w-full;
   }
 }
+@layer components {
+  .form-group {
+    @apply flex flex-col mb-2;
+  }
+  .input-group {
+    @apply flex flex-row space-x-2 mb-2;
+  }
+  .input-group,
+  .form-group label {
+    @apply font-semibold mb-1;
+  }
+}

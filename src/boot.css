@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components {
+  .form-group {
+    @apply flex flex-col mb-2;
+  }
+  .input-group {
+    @apply flex flex-row space-x-2 mb-2;
+  }
+  .input-group, .form-group label {
+    @apply font-semibold mb-1;
+  }
+}
+
+@layer base {
+  li:has(a) {
+    @apply list-none p-0 m-0 flex justify-center items-center;
+  }
+  /* li a {
+    @apply w-full py-2 flex justify-center items-center space-x-2 transition-all duration-300 ease-in-out;
+  } */
+}

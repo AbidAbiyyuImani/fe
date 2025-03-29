@@ -4,6 +4,6 @@
     @apply list-none p-0 m-0 flex justify-center items-center;
   }
   li a {
-    @apply w-full sm:px-4 py-2 sm:py-4 flex justify-center items-center space-x-2;
+    @apply w-full;
   }
 }

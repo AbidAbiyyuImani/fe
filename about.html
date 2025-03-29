@@ -67,17 +67,13 @@
     </div>
   </footer>
 
+  <script src="./plugins/jquery/jquery-3.7.1.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleNav = document.getElementById('toggle-nav');
-      const navToggle = document.getElementById('nav-toggle');
-      const bars = document.getElementById('fa-bars');
-
-      toggleNav.addEventListener('click', function() {
-        navToggle.classList.toggle('opacity-100');
-        navToggle.classList.toggle('-z-10');
-        navToggle.classList.toggle('z-10');
-      });
+    $(document).ready(function() {
+        $('#toggle-nav').click(function() {
+            $('#nav-toggle').toggleClass('opacity-100 -z-10 opacity-0 z-10');
+            $('#icon').toggleClass('fa-bars fa-times');
+        });
     });
   </script>
 </body>
